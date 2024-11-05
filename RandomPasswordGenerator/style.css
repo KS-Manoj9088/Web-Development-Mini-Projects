@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    background-image: linear-gradient(rgb(240, 240, 248) ,#24eb24);
+    background-repeat: repeat-x;
+    background-size: cover;
+    margin: auto;
+    
+}
+
+h1{
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: 4px 4px 10px grey;
+    font-style: normal;
+}
+
+.container
+{   
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    font-style: italic;
+    text-align: center;
+    margin: auto 0;
+    padding: 25px;
+}
+
+.result{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#passBtn{
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    color: black;
+    font-weight: bold;
+    background-color: darkgrey;
+    text-shadow: 2px 2px 5px white;
+}
+
+#passBtn:hover{
+    background-color: black;
+    color: white;
+    text-shadow: 2px 2px 5px grey;
+}
+
+.result .password{
+    padding: 10px;
+    margin: 20px auto;
+    width: 250px;
+    display: none;
+    font-weight: bold;
+    background-color: #f0f0f0;    /* Light background for the password box */
+    border: 2px solid #000;       /* Black border */
+    border-radius: 8px;           /* Rounded corners */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}

@@ -1,0 +1,84 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+.header
+{
+    width: 100%;
+    box-shadow: 0px 2px 10px 0px #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerLeft{
+    width: 48%;
+    margin-left: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerRight{
+    width: 45%;
+    margin-right: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu>ul{
+    display: flex;
+    gap: 30px;
+}
+
+.menu>ul>li a{
+    font-size:12px ;
+    font-weight: bold;
+    color: black;
+}
+
+.headerRight form{
+    width: 70%;
+    display: flex;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.headerRight form button{
+    width: 10%;
+    background: transparent;
+    border: none;
+
+}
+
+.headerRight form input{
+    width: 90%;
+    height: 30px;
+    border: none;
+}
+
+.profile ul{
+    display: flex;
+    gap: 15px;
+}
+
+.profile ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    gap: 3px;
+}
+
+.banner
+{
+    width: 100%;
+}
+
+
+
+
