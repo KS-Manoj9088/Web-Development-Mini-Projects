@@ -138,11 +138,14 @@ function playGame(playerChoice){
                 console.log("Invalid choice");
                 break;
         }
+        resultDiv.classList.remove("green","red");
     if(result === "YOU WIN!"){
         playerPoints++;
+        resultDiv.classList.add("green");
     }
     else{
         computerPoints++;
+        resultDiv.classList.add("red");
     }
     }
     playerDiv.textContent = `Player Choice : ${playerChoice} Score : ${playerPoints}`;
