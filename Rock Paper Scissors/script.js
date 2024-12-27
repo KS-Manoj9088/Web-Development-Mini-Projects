@@ -53,14 +53,12 @@ div1.appendChild(scissor);
 
 // Creating another playerDiv, computerDiv, resultDiv for displaying results
 let playerDiv = document.createElement("div");
-playerDiv.textContent = "PLAYER :";
 playerDiv.style.width = "100%";
 playerDiv.style.paddingLeft = "45%";
 playerDiv.id = "playerDisplay";
 document.body.appendChild(playerDiv);
 
 let computerDiv = document.createElement("div");
-computerDiv.textContent = "COMPUTER :";
 computerDiv.style.width = "100%";
 computerDiv.style.paddingLeft = "45%";
 computerDiv.id = "computerDisplay";
@@ -69,6 +67,9 @@ document.body.appendChild(computerDiv);
 let resultDiv = document.createElement("div");
 resultDiv.style.width = "100%";
 resultDiv.id = "resultDisplay";
+resultDiv.style.paddingLeft = "45%";
+resultDiv.style.marginBottom = "30px";
+resultDiv.textContent = null;
 document.body.appendChild(resultDiv);
 
 
@@ -102,4 +103,50 @@ computerDiv.style.fontSize = "30px";
 resultDiv.style.fontSize = "50px";
 resultDiv.style.marginTop = "30px";
 resultDiv.style.marginBottom = "30px";
+
+//CODE
+
+const choices = ["rock", "paper", "scissor"];
+playerDiv = document.getElementById("playerDisplay");
+computerDiv = document.getElementById("computerDisplay");
+resultDiv = document.getElementById("resultDisplay");
+
+
+let playerPoints = 0;
+let computerPoints = 0;
+function playGame(playerChoice){
+    const computerChoice = choices[Math.floor(Math.random()*3)];
+    let result = "";
+
+    if(playerChoice === computerChoice){
+        result = "IT'S A TIE";
+        playerPoints = 0;
+        computerPoints = 0;
+    }
+    else{
+        switch(playerChoice){
+            case "rock":
+                result = (computerChoice === "scissor") ? "YOU WIN!" : "YOU LOSE!";
+                break;
+            case "paper":
+                result = (computerChoice === "rock") ? "YOU WIN!" : "YOU LOSE!";
+                break;
+            case "scissor":
+                result = (computerChoice === "paper") ? "YOU WIN!" : "YOU LOSE!";
+                break;
+            default : 
+                console.log("Invalid choice");
+                break;
+        }
+    if(result === "YOU WIN!"){
+        playerPoints++;
+    }
+    else{
+        computerPoints++;
+    }
+    }
+    playerDiv.textContent = `Player Choice : ${playerChoice} Score : ${playerPoints}`;
+    computerDiv.textContent = `Computer Choice : ${computerChoice} Score : ${computerPoints}`;
+    resultDiv.textContent = result;
+}
 
